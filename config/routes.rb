@@ -1,6 +1,7 @@
 ShannonBlog::Application.routes.draw do
 
-  get '/posts' => 'posts#index'
+  get '/posts' => 'posts#index', as: 'posts'
+  get '/post/:id' => 'posts#show', as: 'post'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

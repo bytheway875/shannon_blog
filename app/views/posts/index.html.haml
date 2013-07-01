@@ -1,14 +1,10 @@
 %h1 My Name Is #{@name}
 
-%h3 This is a blog post
-%p This is some information in my blog post. It is a blog about something. Hopefully something interesting, but it probably won't be that interesting because blogging is annoying and usually pretty dumb. 
-
-%h3 Isn't it weird how some people blog for a living?
-%p Mommy bloggers make hundreds of thousands of dollars a year blogging. And all they blog about is formula and crafts and other such things. the heck?
-
-%h3 Hey
-%p Bye
+%h2 Read some of my awesome blogs...
 
 - @posts.each do |post|
-	%h3= post.title
-	%p= post.body
+	%h4= link_to post.title, post_path(post)
+
+/ - @posts.each do |post|
+/ 	%h3= post.title
+/ 	%p= post.body
